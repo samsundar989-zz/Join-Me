@@ -25,6 +25,8 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIA8VOUzrv-UAMl-pRUQDm8o-M22ruRw0content_copy&libraries=places"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -80,10 +82,12 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Enter a place, or click on the map!</h2>
+
                     <hr class="light">
                     <p class="text-faded"></p>
                     <div id="search-bar">
                     <input id="pac-input" class="controls" type="text" placeholder="Enter a place">
+                    <div id="map"></div>
                     </div>
                 </div>
             </div>
@@ -146,7 +150,11 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
+    
+    <script src ="js/google_maps.js"></script>
     <script src="js/creative.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiDhU3K_NAYhARMh5Gns4KHSIHD0xxLBU&libraries=places&callback=initMap"
+        async defer></script>
 
 </body>
 
