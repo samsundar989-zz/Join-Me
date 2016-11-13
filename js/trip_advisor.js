@@ -8,7 +8,7 @@ function getLatandLong(latitude, longitude) {
 }
 
 
-function findAttractions()
+function findAttractions(){
     xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)

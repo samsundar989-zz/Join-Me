@@ -1,0 +1,644 @@
+{
+  "httpResponse": {
+    "status": 200,
+    "statusText": "OK"
+  },
+  "response": {
+    "boundaries": {
+      "boundary": [
+        {
+          "boundaryId": "360010136014",
+          "boundaryType": "USA_BLOCKGROUP",
+          "boundaryRef": "B1"
+        }
+      ]
+    },
+    "themes": {
+      "ageTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Population median age",
+            "description": "",
+            "value": "22"
+          },
+          {
+            "name": "Population adult count",
+            "description": "",
+            "value": "3724"
+          },
+          {
+            "name": "Population adult median age",
+            "description": "",
+            "value": "22.6"
+          },
+          {
+            "name": "Population 18 to 19 years",
+            "description": "",
+            "value": "1080"
+          }
+        ],
+        "rangeVariable": [
+          {
+            "name": "Population count",
+            "description": "Population count for various age groups",
+            "field": [
+              {
+                "value": "57",
+                "description": "Population under 5 years"
+              },
+              {
+                "value": "81",
+                "description": "Population 5 to 9 years"
+              },
+              {
+                "value": "108",
+                "description": "Population 10 to 14 years"
+              },
+              {
+                "value": "1181",
+                "description": "Population 15 to 19 years"
+              },
+              {
+                "value": "1508",
+                "description": "Population 20 to 24 years"
+              },
+              {
+                "value": "46",
+                "description": "Population 25 to 29 years"
+              },
+              {
+                "value": "38",
+                "description": "Population 30 to 34 years"
+              },
+              {
+                "value": "62",
+                "description": "Population 35 to 39 years"
+              },
+              {
+                "value": "112",
+                "description": "Population 40 to 44 years"
+              },
+              {
+                "value": "106",
+                "description": "Population 45 to 49 years"
+              },
+              {
+                "value": "150",
+                "description": "Population 50 to 54 years"
+              },
+              {
+                "value": "148",
+                "description": "Population 55 to 59 years"
+              },
+              {
+                "value": "153",
+                "description": "Population 60 to 64 years"
+              },
+              {
+                "value": "108",
+                "description": "Population 65 to 69 years"
+              },
+              {
+                "value": "86",
+                "description": "Population 70 to 74 years"
+              },
+              {
+                "value": "59",
+                "description": "Population 75 to 79 years"
+              },
+              {
+                "value": "46",
+                "description": "Population 80 to 84 years"
+              },
+              {
+                "value": "22",
+                "description": "Population 85 years and over"
+              }
+            ]
+          }
+        ]
+      },
+      "genderTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Male population count",
+            "description": "",
+            "value": "1883"
+          },
+          {
+            "name": "Female population count",
+            "description": "",
+            "value": "2188"
+          }
+        ]
+      },
+      "incomeTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Household Median Income $",
+            "description": "",
+            "value": "75391"
+          },
+          {
+            "name": "Household Average Income $",
+            "description": "",
+            "value": "96127"
+          }
+        ],
+        "rangeVariable": [
+          {
+            "name": "% Household income",
+            "description": "Household percentage for various income ranges",
+            "field": [
+              {
+                "value": "3.6",
+                "description": "Less than $10,000"
+              },
+              {
+                "value": "3.13",
+                "description": "$10,000 to $14,999"
+              },
+              {
+                "value": "10.49",
+                "description": "$15,000 to $24,999"
+              },
+              {
+                "value": "7.51",
+                "description": "$25,000 to $34,999"
+              },
+              {
+                "value": "8.92",
+                "description": "$35,000 to $49,999"
+              },
+              {
+                "value": "16.12",
+                "description": "$50,000 to $74,999"
+              },
+              {
+                "value": "15.02",
+                "description": "$75,000 to $99,999"
+              },
+              {
+                "value": "18.78",
+                "description": "$100,000 to $149,999"
+              },
+              {
+                "value": "9.23",
+                "description": "$150,000 to $199,999"
+              },
+              {
+                "value": "7.2",
+                "description": "$200,000 or more"
+              }
+            ]
+          }
+        ]
+      },
+      "raceTheme": {
+        "boundaryRef": "B1",
+        "rangeVariable": [
+          {
+            "name": "Race %",
+            "description": "Population percentage by race",
+            "field": [
+              {
+                "value": "87.37",
+                "description": "Population % White alone"
+              },
+              {
+                "value": "2.33",
+                "description": "Population % Black or African American alone"
+              },
+              {
+                "value": "0.02",
+                "description": "Population % American Indian and Alaska native alone"
+              },
+              {
+                "value": "6.93",
+                "description": "Population % Asian alone"
+              },
+              {
+                "value": "0",
+                "description": "Population % native Hawaiian and Opi alone"
+              },
+              {
+                "value": "1.38",
+                "description": "Population % some other race alone"
+              }
+            ]
+          }
+        ]
+      },
+      "ethnicityTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Population % two or more races alone",
+            "description": "",
+            "value": "1.97"
+          },
+          {
+            "name": "Population % hispanic",
+            "description": "",
+            "value": "4.22"
+          },
+          {
+            "name": "Population % not hispanic",
+            "description": "",
+            "value": "95.78"
+          }
+        ]
+      },
+      "maritalStatusTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Population 15 years and over",
+            "description": "",
+            "value": "3825"
+          }
+        ],
+        "rangeVariable": [
+          {
+            "name": "% Marital status",
+            "description": "Population percentage based on marital status",
+            "field": [
+              {
+                "value": "42.48",
+                "description": "Population % 15 years and over - Never married"
+              },
+              {
+                "value": "42.67",
+                "description": "Population % 15 years and over - Now married"
+              },
+              {
+                "value": "1.39",
+                "description": "Population % 15 years and over - Separated"
+              },
+              {
+                "value": "6.04",
+                "description": "Population % 15 years and over - Widowed"
+              },
+              {
+                "value": "7.42",
+                "description": "Population % 15 years and over - Divorced"
+              }
+            ]
+          }
+        ]
+      },
+      "automobileTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Expenditure on transportation in $",
+            "description": "",
+            "value": "6030957"
+          },
+          {
+            "name": "Expenditure on vehicle purchase (net outlay) in $",
+            "description": "",
+            "value": "2431440"
+          },
+          {
+            "name": "Expenditure on new cars and trucks in $",
+            "description": "",
+            "value": "1251368"
+          },
+          {
+            "name": "Expenditure on used cars and trucks in $",
+            "description": "",
+            "value": "1153974"
+          }
+        ],
+        "rangeVariable": [
+          {
+            "name": "Vehicle purchase",
+            "description": "Expenditure on vehicle purchases",
+            "field": [
+              {
+                "value": "553867",
+                "description": "Expenditure on new cars in $"
+              },
+              {
+                "value": "697501",
+                "description": "Expenditure on new trucks in $"
+              },
+              {
+                "value": "550347",
+                "description": "Expenditure on used cars in $"
+              },
+              {
+                "value": "603627",
+                "description": "Expenditure on used trucks in $"
+              },
+              {
+                "value": "26098",
+                "description": "Expenditure on other vehicles in $"
+              },
+              {
+                "value": "9037",
+                "description": "Expenditure on new motorcycles in $"
+              },
+              {
+                "value": "17061",
+                "description": "Expenditure on used motorcycles in $"
+              }
+            ]
+          }
+        ]
+      },
+      "purchasingBehaviorTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Expenditure on pet purchase, supplies, medicine in $",
+            "description": "",
+            "value": "86106"
+          },
+          {
+            "name": "Expenditure on alcoholic beverages purchased on trips in $",
+            "description": "",
+            "value": "35690"
+          },
+          {
+            "name": "Expenditure on purchase of other vehicle in $",
+            "description": "",
+            "value": "13618"
+          },
+          {
+            "name": "Expenditure on purchase of boat with motor in $",
+            "description": "",
+            "value": "43615"
+          }
+        ]
+      },
+      "educationalAttainmentTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Population count 25 years and over",
+            "description": "",
+            "value": "1136"
+          }
+        ],
+        "rangeVariable": [
+          {
+            "name": "Educational attainment",
+            "description": "Population count based on educational attainment",
+            "field": [
+              {
+                "value": "6",
+                "description": "No schooling completed"
+              },
+              {
+                "value": "1",
+                "description": "Nursery to 4th grade"
+              },
+              {
+                "value": "2",
+                "description": "5th and 6th grade"
+              },
+              {
+                "value": "4",
+                "description": "7th and 8th grade"
+              },
+              {
+                "value": "3",
+                "description": "9th grade"
+              },
+              {
+                "value": "9",
+                "description": "10th grade"
+              },
+              {
+                "value": "10",
+                "description": "11th grade"
+              },
+              {
+                "value": "8",
+                "description": "12th grade, no diploma"
+              },
+              {
+                "value": "238",
+                "description": "High school graduate, GED, or alternative"
+              },
+              {
+                "value": "67",
+                "description": "Some college, less than 1 year"
+              },
+              {
+                "value": "118",
+                "description": "Some college, 1 or more years, no degree"
+              },
+              {
+                "value": "112",
+                "description": "Associate's degree"
+              },
+              {
+                "value": "301",
+                "description": "Bachelor's degree"
+              },
+              {
+                "value": "178",
+                "description": "Master's degree"
+              },
+              {
+                "value": "45",
+                "description": "Professional school degree"
+              },
+              {
+                "value": "34",
+                "description": "Doctorate degree"
+              }
+            ]
+          }
+        ]
+      },
+      "financialProductsTheme": {
+        "boundaryRef": "B1",
+        "rangeVariable": [
+          {
+            "name": "Household with financial assets $",
+            "description": "Household count with financial assets",
+            "field": [
+              {
+                "value": "4",
+                "description": "$ 0 - $ 5,000"
+              },
+              {
+                "value": "26",
+                "description": "$ 5,000 - $ 14,999"
+              },
+              {
+                "value": "42",
+                "description": "$ 15,000 - $ 24,999"
+              },
+              {
+                "value": "5",
+                "description": "$ 25,000 - $ 34,999"
+              },
+              {
+                "value": "28",
+                "description": "$ 35,000 - $ 49,999"
+              },
+              {
+                "value": "38",
+                "description": "$ 50,000 - $ 74,999"
+              },
+              {
+                "value": "20",
+                "description": "$ 75,000 - $ 99,999"
+              },
+              {
+                "value": "43",
+                "description": "$100,000 - $149,999"
+              },
+              {
+                "value": "66",
+                "description": "$150,000 - $249,999"
+              },
+              {
+                "value": "127",
+                "description": "$250,000 - $499,999"
+              },
+              {
+                "value": "240",
+                "description": "$500,000 +"
+              }
+            ]
+          }
+        ]
+      },
+      "commuterPatternsTheme": {
+        "boundaryRef": "B1",
+        "individualValueVariable": [
+          {
+            "name": "Aggregate travel time (in minutes)",
+            "description": "",
+            "value": "24737"
+          },
+          {
+            "name": "Average travel time (in minutes)",
+            "description": "",
+            "value": "21"
+          }
+        ],
+        "rangeVariable": [
+          {
+            "name": "Mode of transportation",
+            "description": "Population count by mode of transportation to work",
+            "field": [
+              {
+                "value": "1023",
+                "description": "Car, truck, or van - drove alone"
+              },
+              {
+                "value": "79",
+                "description": "Car, truck, or van - carpooled"
+              },
+              {
+                "value": "33",
+                "description": "Public transportation - bus"
+              },
+              {
+                "value": "0",
+                "description": "Public transportation - streetcar"
+              },
+              {
+                "value": "0",
+                "description": "Public transportation - subway"
+              },
+              {
+                "value": "2",
+                "description": "Public transportation - railroad"
+              },
+              {
+                "value": "0",
+                "description": "Public transportation - ferryboat"
+              },
+              {
+                "value": "1",
+                "description": "Taxicab"
+              },
+              {
+                "value": "0",
+                "description": "Motorcycle"
+              },
+              {
+                "value": "5",
+                "description": "Bicycle"
+              },
+              {
+                "value": "45",
+                "description": "Walked"
+              },
+              {
+                "value": "7",
+                "description": "Other means"
+              }
+            ]
+          },
+          {
+            "name": "Travel time",
+            "description": "Population count by travel time to work",
+            "field": [
+              {
+                "value": "46",
+                "description": "Less than 5 minutes"
+              },
+              {
+                "value": "126",
+                "description": "5 to 9 minutes"
+              },
+              {
+                "value": "259",
+                "description": "0 to 14 minutes"
+              },
+              {
+                "value": "291",
+                "description": "15 to 19 minutes"
+              },
+              {
+                "value": "236",
+                "description": "20 to 24 minutes"
+              },
+              {
+                "value": "51",
+                "description": "25 to 29 minutes"
+              },
+              {
+                "value": "108",
+                "description": "30 to 34 minutes"
+              },
+              {
+                "value": "9",
+                "description": "35 to 39 minutes"
+              },
+              {
+                "value": "10",
+                "description": "40 to 44 minutes"
+              },
+              {
+                "value": "22",
+                "description": "45 to 59 minutes"
+              },
+              {
+                "value": "24",
+                "description": "60 to 89 minutes"
+              },
+              {
+                "value": "13",
+                "description": "90 or more minutes"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "status": "success"
+}

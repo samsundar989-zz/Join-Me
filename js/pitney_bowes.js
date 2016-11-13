@@ -23,11 +23,21 @@ function callGeoLifeByLocation(x, y, token) {
     //enter the returned access token as explained in Obtaining Credentials section
     GLife.getDemographicByLocation({latitude: x, longitude: y}, 'geoApisCallback');
 }
+
+json = 0;
+
 function geoApisCallback(data) {
     if (data !== undefined) {
-        $('#ResponseDiv').html(JSON.stringify(data));
+        var blah = data;
+        $('#ResponseDiv').html(blah);
+        console.log(blah);
+
+        json = data;
+        console.log(json.response.themes.ageTheme);
+
     }
 }
+
 /**
  * Returns GeoLife Variables by location in XML or JSON formats
  * @param responseType
@@ -58,6 +68,23 @@ function geoApisCallback(data) {
  return true;
  }*/
 
-function showList(){
-    console.log("success");
+$('#prefs').submit(function (e) {
+    e.preventDefault();
+});
+
+function showList() {
+    var gender = $('input[name=gender]:checked').val();
+    var age = $('input[name=age]').val();
+    var ethnic = $('input[name=ethnic]').val();
+    var marital = $('input[name=marital]:checked').val();
+    var income = $('input[name=income]').val();
+    var household = $('input[name=household]').val();
+    var automobile = $('input[name=automobile]:checked').val();
+    var college = $('input[name=college]:checked').val();
+
+    var genderObject = json.response.themes.genderTheme.individualValueVariable;
+    var malePopulationCount = genderObject[0].value;
+    var femalePopulationCount = genderObject[1].value;
+
+
 }
