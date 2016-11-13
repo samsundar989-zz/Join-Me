@@ -42,7 +42,7 @@ function geoApisCallback(data) {
     }	
 
 
-}
+
 
 /**
  * Returns GeoLife Variables by location in XML or JSON formats
@@ -85,7 +85,7 @@ function showList() {
     var ethnic = $('input[name=ethnic]').val();
     var marital = $('input[name=marital]:checked').val();
     var income = $('input[name=income]').val();
-    var household = $('input[name=household]').val();
+    var household = $('input[name=commute]').val();
     var automobile = $('input[name=automobile]:checked').val();
     var college = $('input[name=college]:checked').val();
 
@@ -93,7 +93,23 @@ function showList() {
     var malePopulationCount = genderObject[0].value;
     var femalePopulationCount = genderObject[1].value;
 
+    var ageObject = json.response.themes.ageTheme.individualValueVariable;
 
+    var ethnicObject = json.response.themes.EthnicityTheme.individualValueVariable;
+
+    var maritalObject = json.response.themes.MaritalStatusTheme.individualValueVariable;
+
+    var incomeObject = json.response.themes.IncomeTheme.individualValueVariable;
+
+    var commuteObject = json.response.themes.CommuterPatternsTheme.individualValueVariable
+
+    var automobileObject = json.response.themes.AutomobileTheme.individualValueVariable;
+
+    var collegeObject = json.response.themes.EducationalAttainmentTheme.individualValueVariable;
+
+
+
+}
 
 $('#prefs').submit(function (e) {
     e.preventDefault();
