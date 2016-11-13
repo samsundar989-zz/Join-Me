@@ -28,7 +28,7 @@ json = 0;
 
 function geoApisCallback(data) {
     if (data !== undefined) {
-<<<<<<< HEAD
+
         var blah = data;
         $('#ResponseDiv').html(blah);
         console.log(blah);
@@ -37,11 +37,11 @@ function geoApisCallback(data) {
         console.log(json.response.themes.ageTheme);
 
     }
-=======
+
         $('#ResponseDiv').html(JSON.stringify(data));
     }	
 
->>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
+
 }
 
 /**
@@ -73,8 +73,7 @@ function geoApisCallback(data) {
  xhr.send(null);
  return true;
  }*/
-<<<<<<< HEAD
- 
+
 
 $('#prefs').submit(function (e) {
     e.preventDefault();
@@ -95,7 +94,7 @@ function showList() {
     var femalePopulationCount = genderObject[1].value;
 
 
-=======
+
 $('#prefs').submit(function (e) {
     e.preventDefault();
 });
@@ -109,5 +108,5 @@ function updateList() {
 }
 function showList(){
     console.log("success");
->>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
+
 }
