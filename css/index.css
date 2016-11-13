@@ -70,3 +70,7 @@ input {
     margin: 0em 0em 0em 0em;
     font: 13.3333px Arial;
 }
+
+#final-list {
+    list-style-type: none;
+}

@@ -23,10 +23,11 @@ function GetLatandLong(latitude, longitude) {
 		console.log(data);
 
 		for(var i = 0; i < data.data.length; i++){
-			console.log(data.data[i].name);
-			console.log(data.data[i].subcategory[0].name);
             var li = document.createElement('li');
-            li.appendChild(document.createTextNode(data.data[i].name + " " + data.data[i].subcategory[0].name));
+            var ith = data.data[i];
+
+            li.appendChild(document.createTextNode(data.data[i].name + "(" + ith.subcategory[0].name + ") located at "
+                + ith.address_obj.address_string));
             li.className += " poi-item";
             ul.append(li);
         }
