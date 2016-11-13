@@ -1,5 +1,5 @@
 var url = "http://api.tripadvisor.com/api/partner/2.0/map//attractions?key=3762e2cd-0868-4cbe-b702-32d2dffcd449";
-//
+
 var x;
 var y;
 var pos;
