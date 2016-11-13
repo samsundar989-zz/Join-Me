@@ -199,11 +199,9 @@
                 </div>
             </div>
 
-
             <div style="text-align:center;margin-top:100px;">
-                <input type="submit" value="Submit info" class="btn btn-primary btn-xl page-scroll" onClick="showDiv(); updateList()"/>
-
-
+                <input type="submit" value="Submit info" class="btn btn-primary btn-xl page-scroll"
+                       onClick="showDiv(); updateList()"/>
             </div>
         </form>
     </div>
@@ -214,22 +212,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <ul id="final-list" style="display:none;">
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
-                    <li class="poi_item"></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <h1>GeoLife SDK Test Page</h1>
-    <button type="button" onclick="callGeoLifeByLocation();">GeoLife Demographics ByLocation</button>
-    <div class="response" id="ResponseDiv">See Response Here !</div>
+    <div class="response" id="ResponseDiv"></div>
 </section>
 
 <!-- jQuery -->
@@ -249,7 +237,7 @@
 
 <script src="js/google_maps.js"></script>
 <script src="js/pitney_bowes.js"></script>
-<!--<script src="js/trip_advisor.js"></script> -->
+<script src="js/trip_advisor.js"></script>
 <script src="js/creative.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARxiVAS0kJKVFIFhkQxXGkNEu3tDizaRI&libraries=places&callback=initMap"

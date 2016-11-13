@@ -32,14 +32,10 @@ function geoApisCallback(data) {
         json = data;
 
         $('#ResponseDiv').html(json);
-        console.log(json);
-
-        console.log(json.response.themes.ageTheme);
-
     }
 
-       // $('#ResponseDiv').html(JSON.stringify(data));
-    }	
+    // $('#ResponseDiv').html(JSON.stringify(data));
+}
 
 
 
@@ -58,7 +54,6 @@ function geoApisCallback(data) {
  if (filter!= null && filter != ''){
  apiUrl += '&filter=' + filter;
  }
-
  xhr.open('GET', LOCATION_INTELLIGENCE_SERVER_URL + apiUrl);
  if (responseType=='XML'){
  xhr.setRequestHeader('Content-type', 'application/xml');
@@ -92,112 +87,102 @@ function showList() {
     var categories = [];
 
     if(gender=="Male"){
-    	categories.push("adventure");
+        categories.push("adventure");
     }
     else {
-    	categories.push("shopping");
+        categories.push("shopping");
     }
 
     if (age>21 && age<35){
-    	categories.push("nightlife");
+        categories.push("nightlife");
 
     }
     else if(age>35 && age<60){
-    	categories.push("outdoors");
+        categories.push("outdoors");
 
     }
     else if (age>60) {
-    	categories.push("museums");
+        categories.push("museums");
 
     }
     if(ethnic>=2) {
-    	categories.push("cultural");
+        categories.push("cultural");
     }
     if(marital=="Yes"){
-    	categories.push("food_drink");
+        categories.push("food_drink");
     }
     if(income>120000){
-    	categories.push("sightseeing_tours")
+        categories.push("sightseeing_tours")
     }
     if(commute>30){
-    	categories.push("landmarks");
+        categories.push("landmarks");
     }
     if(automobile=="Yes"){
-    	categories.push("outdoors");
+        categories.push("outdoors");
     }
     if(college=="Yes"){
-    	categories.push("performances");
+        categories.push("performances");
     }
-
-
 
     var genderObject = json.response.themes.genderTheme.individualValueVariable;
     var malePopulationCount = genderObject[0].value;
     var femalePopulationCount = genderObject[1].value;
     if(femalePopulationCount>malePopulationCount){
-    	categories.push("shopping");
+        categories.push("shopping");
     }
-
-
 
     var ageObject = json.response.themes.ageTheme.individualValueVariable;
     var medAge = ageObject[0].value;
     if(medAge>42){
-    	categories.push("museums")
+        categories.push("museums")
     }
     else{
-    	categories.push("nightlife")
+        categories.push("nightlife")
     }
 
     var ethnicObject = json.response.themes.ethnicityTheme.individualValueVariable;
     var percentPop = ethnicObject[0].value;
     if(percentPop>3){
-    	categories.push("cultural");
+        categories.push("cultural");
     }
 
     var maritalObject = json.response.themes.maritalStatusTheme.rangeVariable;
     var married = maritalObject[0].field[1].value;
     if(married>34){
-    	categories.push("wellness_spas");
+        categories.push("wellness_spas");
     }
 
     var incomeObject = json.response.themes.incomeTheme.individualValueVariable;
     var income = incomeObject[1].value;
     if(income>55000){
-    	categories.push("activites");
+        categories.push("activites");
     }
 
     var commuteObject = json.response.themes.commuterPatternsTheme.individualValueVariable;
     var commute = commuteObject[1].value;
     if(commute>28){
-    	categories.push("zoos_aquariums");
+        categories.push("zoos_aquariums");
     }
 
     var automobileObject = json.response.themes.automobileTheme.individualValueVariable;
     var car = automobileObject[1].value;
     if(car>3300000){
-    	categories.push("clubs");
+        categories.push("clubs");
     }
 
     var collegeObject = json.response.themes.educationalAttainmentTheme.rangeVariable;
     var education = collegeObject[0].field[11].value;
     if(education>65){
-    	categories.push("amusement");
+        categories.push("amusement");
     }
 
-console.log(categories);
-console.log("it works fam");
-return categories;
-}
+    console.log(categories);
+    console.log(json);
 
-$('#prefs').submit(function (e) {
-    e.preventDefault();
-});
-function showDiv() {
-	document.getElementById("final-list").style.display = "block";
+    return categories;
 }
 
 function updateList() {
-	var item = document.getElementsByClassName("poi-item");
-	item.value = "New York";
+    var item = document.getElementsByClassName("poi-item");
+    item.value = "New York";
 }
