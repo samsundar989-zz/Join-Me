@@ -63,7 +63,7 @@
 
 })(jQuery); // End of use strict
 
-submitForms = function(){
+/*submitForms = function(){
     document.forms["gender"].submit();
     document.forms["age"].submit();
     document.forms["ethnic"].submit();
@@ -72,4 +72,10 @@ submitForms = function(){
     document.forms["household"].submit();
     document.forms["automobile"].submit();
     document.forms["college"].submit();
+}
+*/
+
+showList = function(){
+    document.getElementById('final-list').style.display = "block";
+
 }

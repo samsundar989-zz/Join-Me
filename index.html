@@ -202,7 +202,7 @@
         </div>
     </div>
     <div style="text-align:center;margin-top=100px;">
-    <input type="button" value="Submit info" onClick="submitForms()" class="btn btn-primary btn-xl page-scroll" />
+    <input type="button" value="Submit info" onClick="showList();" class="btn btn-primary btn-xl page-scroll" />
 </div>
 </section>
 
@@ -210,8 +210,8 @@
     <div class="container">
         <div class="row">
          <div class="col-lg-8 col-lg-offset-2 text-center">
-            <ul id="final-list">
-                <li class="poi_item"></li>
+            <ul id="final-list" style="display:none;">
+                <li class="poi_item" ></li>
                 <li class="poi_item"></li>
                 <li class="poi_item"></li>
                 <li class="poi_item"></li>
@@ -240,7 +240,7 @@
 
 
 <script src="js/google_maps.js"></script>
-<script src="js/creative.min.js"></script>
+<script src="js/creative.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARxiVAS0kJKVFIFhkQxXGkNEu3tDizaRI&libraries=places&callback=initMap"
         async defer></script>
