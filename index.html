@@ -109,15 +109,16 @@
     </div>
     <div class="container">
         <div class="row">
+            <form id="prefs" name="prefs" action="prefs.asp" method="get">
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa fa-venus-mars text-primary sr-icons"></i>
                     <h3>Gender</h3>
                     <p class="text-muted">Are you a male or female?</p>
-                    <form action="gender-form.asp">
-                        <input type="radio" name="gender" value="Male"> Male<br>
+                  
+                        <input type="radio" name="gender" value="Male" > Male<br>
                         <input type="radio" name="gender" value="Female" checked> Female<br>   
-                    </form>
+                    
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -126,9 +127,9 @@
                     <i class="fa fa-4x fa-child text-primary sr-icons"></i>
                     <h3>Age</h3>
                     <p class="text-muted">How old are you?</p>
-                    <form action="age-form.asp">
+                   
                     <input type="number" name="age" min="7" max="100">
-                </form>
+                
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -139,9 +140,9 @@
                     <h3>Ethnicity</h3>
                     <p class="text-muted">How many ethnic backgrounds do you identify with?</p>
                 </div>
-                    <form action="ethnicity-form.asp">
+                    
                         <input type="number" name="ethnic" min="1" max="3">
-                    </form>
+                    
 
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -149,10 +150,9 @@
                     <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
                     <h3>Marital Status</h3>
                     <p class="text-muted">Are you married?</p>
-                    <form action="marital-form.asp">
-                        <input type="radio" name="marital" value="Yes"> Yes <br>
+                                          <input type="radio" name="marital" value="Yes"> Yes <br>
                         <input type="radio" name="marital" value="No"> No <br>
-                    </form>
+                    
                 </div>
             </div>
         </div>
@@ -164,9 +164,9 @@
                     <i class="fa fa-4x fa-dollar text-primary sr-icons"></i>
                     <h3>Income</h3>
                     <p class="text-muted">How much do you make?</p>
-                    <form action="income-form.asp">
+                    
                         <input type="number" name="income" min="0" max="200,000">
-                    </form> 
+                     
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -174,9 +174,9 @@
                     <i class="fa fa-4x fa-home text-primary sr-icons"></i>
                     <h3>Household size</h3>
                     <p class="text-muted">How many people are in your house?</p>
-                    <form action="household-form.asp">
+                    
                         <input type="number" name="household" min="1" max="13">
-                    </form> 
+                   
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -184,10 +184,10 @@
                     <i class="fa fa-4x fa-automobile text-primary sr-icons"></i>
                     <h3>Automobile</h3>
                     <p class="text-muted">Do you have a car?</p>
-                    <form action="automobile-form.asp">
+                    
                         <input type="radio" name="automobile" value="Yes"> Yes <br>
                         <input type="radio" name="automobile" value="No"> No <br>
-                    </form>
+                    
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -195,10 +195,10 @@
                     <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                     <h3>Educational Attainment</h3>
                     <p class="text-muted">Are you a college graduate?</p>
-                    <form action="college-form.asp">
+                    
                         <input type="radio" name="college" value="Yes"> Yes <br>
                         <input type="radio" name="college" value="No"> No <br>
-                    </form>
+                    
                 </div>
             </div>
         </div>
@@ -206,6 +206,7 @@
     <div style="text-align:center;margin-top=100px;">
     <input type="button" value="Submit info" onClick="showList();" class="btn btn-primary btn-xl page-scroll" />
 </div>
+</form>
 </section>
 
 <section id="poi-list">
@@ -248,6 +249,7 @@
 
 <script src="js/google_maps.js"></script>
 <script src="js/pitney_bowes.js"></script>
+<script src = "js/trip_advisor.js"></script>
 <script src="js/creative.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARxiVAS0kJKVFIFhkQxXGkNEu3tDizaRI&libraries=places&callback=initMap"

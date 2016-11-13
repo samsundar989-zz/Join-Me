@@ -75,7 +75,4 @@
 }
 */
 
-showList = function(){
-    document.getElementById('final-list').style.display = "block";
 
-}

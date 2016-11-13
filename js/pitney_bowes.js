@@ -10,7 +10,6 @@ xhr.setRequestHeader("Authorization", "Basic UkMydkxoSzdFOXpCN0pvbnQ5WEl0QVp4bUx
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhr.send('grant_type=client_credentials');
 
-//alert(objJSON.access_token);
 
 function handleLatAndLong(latitude, longitude) {
     var responseText = xhr.responseText;
