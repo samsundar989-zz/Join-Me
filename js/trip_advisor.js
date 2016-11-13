@@ -17,31 +17,44 @@ function GetLatandLong(latitude, longitude) {
 	console.log(realurl);
 	//console.log(realurl.getJSON)
 	//console.log(xhr);
-	$.getJSON(realurl, function(data){
-	console.log(data);
 
+    var ul = $('#final-list');
+	$.getJSON(realurl, function(data){
+		console.log(data);
+
+		for(var i = 0; i < data.data.length; i++){
+			console.log(data.data[i].name);
+			console.log(data.data[i].subcategory[0].name);
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(data.data[i].name + " " + data.data[i].subcategory[0].name));
+            li.className += " poi-item";
+            ul.append(li);
+        }
 	});
 
-	
+    showDiv();
+}
+
+function showDiv() {
+    document.getElementById("final-list").style.display = "block";
 }
 
 
-<<<<<<< HEAD
 function findAttractions(){
     xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
-    }
+    };
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
     }
-=======
 
 
 
 
->>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
+
+
 
     
    
