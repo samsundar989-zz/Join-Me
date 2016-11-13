@@ -99,7 +99,11 @@ function GetLatlong() {
             var latitude = results[0].geometry.location.lat();
             var longitude = results[0].geometry.location.lng();
             handleLatAndLong(latitude, longitude);
+<<<<<<< HEAD
             //getLatandLong(latitude, longitude);
+=======
+            GetLatandLong(latitude, longitude);
+>>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
         }
     });
 }

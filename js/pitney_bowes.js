@@ -28,6 +28,7 @@ json = 0;
 
 function geoApisCallback(data) {
     if (data !== undefined) {
+<<<<<<< HEAD
         var blah = data;
         $('#ResponseDiv').html(blah);
         console.log(blah);
@@ -36,6 +37,11 @@ function geoApisCallback(data) {
         console.log(json.response.themes.ageTheme);
 
     }
+=======
+        $('#ResponseDiv').html(JSON.stringify(data));
+    }	
+
+>>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
 }
 
 /**
@@ -67,6 +73,7 @@ function geoApisCallback(data) {
  xhr.send(null);
  return true;
  }*/
+<<<<<<< HEAD
  
 
 $('#prefs').submit(function (e) {
@@ -88,4 +95,19 @@ function showList() {
     var femalePopulationCount = genderObject[1].value;
 
 
+=======
+$('#prefs').submit(function (e) {
+    e.preventDefault();
+});
+function showDiv() {
+	document.getElementById("final-list").style.display = "block";
+}
+
+function updateList() {
+	var item = document.getElementsByClassName("poi-item");
+	item.value = "New York";
+}
+function showList(){
+    console.log("success");
+>>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
 }
