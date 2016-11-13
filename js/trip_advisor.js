@@ -37,7 +37,9 @@ function GetLatandLong(latitude, longitude) {
 }
 
 function showDiv() {
+    document.getElementById("tit").style.display = "block"
     document.getElementById("final-list").style.display = "block";
+
 }
 
 
