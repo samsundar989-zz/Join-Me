@@ -26,7 +26,7 @@ function GetLatandLong(latitude, longitude) {
 }
 
 
-<<<<<<< HEAD
+
 function findAttractions(){
     xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
@@ -36,12 +36,12 @@ function findAttractions(){
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
     }
-=======
 
 
 
 
->>>>>>> c5b12293055f81f0ba752272c1b15481558863d4
+
+
 
     
    
