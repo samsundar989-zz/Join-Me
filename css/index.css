@@ -1,18 +1,15 @@
-html, body {
+html, body, section {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-section {
-    height: 80%;
-    margin: 0;
-    padding: 0;
+.container {
+    height: 30%;
 }
 
 #map {
-    height: 80%;
-    margin-top: 2.5%;
+    height: 70%;
 }
 
 .controls {
@@ -31,10 +28,10 @@ section {
     font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
-    font-color: #000000;
+    margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 500px;
+    width: 300px;
 }
 
 #pac-input:focus {
@@ -43,6 +40,21 @@ section {
 
 .pac-container {
     font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+#target {
+    width: 345px;
 }
 
 input {

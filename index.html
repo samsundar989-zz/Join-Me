@@ -88,12 +88,11 @@
 
                 <hr class="light">
                 <p class="text-faded"></p>
-                <input id="pac-input" class="controls" type="text" placeholder="Enter a place">
-
             </div>
         </div>
     </div>
 
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <div id="map"></div>
 </section>
 
@@ -242,8 +241,9 @@
 
 <script src="js/google_maps.js"></script>
 <script src="js/creative.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARxiVAS0kJKVFIFhkQxXGkNEu3tDizaRI&callback=initMap"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARxiVAS0kJKVFIFhkQxXGkNEu3tDizaRI&libraries=places&callback=initMap"
+        async defer></script>
 
 </body>
 
