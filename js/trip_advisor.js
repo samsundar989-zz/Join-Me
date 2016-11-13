@@ -1,22 +1,42 @@
-var url = "http://api.tripadvisor.com/api/partner/2.0/map/51.5014,-0.1419/attractions?key=3762e2cd-0868-4cbe-b702-32d2dffcd449";
-var xmlHttp;
-
+var url = "http://api.tripadvisor.com/api/partner/2.0/map//attractions?key=3762e2cd-0868-4cbe-b702-32d2dffcd449";
+//
+var x;
+var y;
+var pos;
+var realurl;
  
-function getLatandLong(latitude, longitude) {
+function GetLatandLong(latitude, longitude) {
+	pos = url.lastIndexOf("map/");
+	pos+=4;
+	realurl = url.slice(0,pos)+latitude+","+longitude+url.slice(pos);
+	
+	//xhr.open("POST",realurl, true);
 	console.log(latitude);
 	console.log(longitude);
+	console.log(pos);
+	console.log(realurl);
+	//console.log(realurl.getJSON)
+	//console.log(xhr);
+	$.getJSON(realurl, function(data){
+	console.log(data);
+
+	});
+
+	
 }
 
 
-function findAttractions()
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
-    }
+
+function showDiv() {
+	document.getElementbyId('final-list').style.display = "block";
+}
+
+function updateList() {
+	var item =document.getElementsByClassName("poi-item");
+	item.value = "New York";
+}
+
+
 
     
    
