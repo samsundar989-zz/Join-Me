@@ -67,6 +67,7 @@ function geoApisCallback(data) {
  xhr.send(null);
  return true;
  }*/
+ 
 
 $('#prefs').submit(function (e) {
     e.preventDefault();
