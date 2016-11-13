@@ -1,50 +1,34 @@
-var LOCATION_INTELLIGENCE_SERVER_URL="https://api.pitneybowes.com/location-intelligence/geolife/v1/demographics/";
+var LOCATION_INTELLIGENCE_SERVER_URL = "https://api.pitneybowes.com/location-intelligence/geolife/v1/demographics/";
 
 var responseType = 'JSON';
 var filter = 'GenderTheme,AgeTheme,EthnicityTheme,MaritalStatusTheme,IncomeTheme,CommuterPatternsTheme,AutomobileTheme,EducationalAttainmentTheme';
-var x;
-var y;
 var url = "https://api.pitneybowes.com/oauth/token";
 
 var xhr = new XMLHttpRequest();
 xhr.open("POST", url, true);
-
-//Send the proper header information along with the request
 xhr.setRequestHeader("Authorization", "Basic UkMydkxoSzdFOXpCN0pvbnQ5WEl0QVp4bUxiV2lHTTU6NXJqbXNGZ0ZZVDhheTM1TQ==");
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
 xhr.send('grant_type=client_credentials');
-
-console.log(xhr);
-var strJSON = xhr.responseText;
-
 
 //alert(objJSON.access_token);
 
-function handleLatAndLong(latitude, longitude){
-	callGeoLifeByLocation(latitude,longitude);
-	console.log(latitude);
-	console.log(longitude);
-	
-	console.log(xhr.responseText);
+function handleLatAndLong(latitude, longitude) {
+    var responseText = xhr.responseText;
+    var token = JSON.parse(responseText).access_token;
 
-
-
-	
-
+    callGeoLifeByLocation(latitude, longitude, token);
 }
 
-function callGeoLifeByLocation(x, y){
-				var GLife = new GEOAPIS_V1.geoLife('67Xo6Dr0fGNhLzdy9lQAktXmiwaQ');
-				//enter the returned access token as explained in Obtaining Credentials section
-				GLife.getDemographicByLocation({latitude:x, longitude:y}, 'geoApisCallback');
-			}
-			function geoApisCallback(data){
-				if(data !== undefined){
-					$('#ResponseDiv').html(JSON.stringify(data));
-				}
-			}
-			console.log(strJSON);
+function callGeoLifeByLocation(x, y, token) {
+    var GLife = new GEOAPIS_V1.geoLife(token);
+    //enter the returned access token as explained in Obtaining Credentials section
+    GLife.getDemographicByLocation({latitude: x, longitude: y}, 'geoApisCallback');
+}
+function geoApisCallback(data) {
+    if (data !== undefined) {
+        $('#ResponseDiv').html(JSON.stringify(data));
+    }
+}
 /**
  * Returns GeoLife Variables by location in XML or JSON formats
  * @param responseType
@@ -54,23 +38,23 @@ function callGeoLifeByLocation(x, y){
  * @param profile
  */
 /*function getGeoLifeByLocation(responseType, latitude, longitude, filter){
-	var xhr = new XMLHttpRequest();
-	var apiUrl = 'bylocation?latitude=' + latitude + '&longitude=' + longitude;
-	if (filter!= null && filter != ''){
-		apiUrl += '&filter=' + filter;
-	}
-	
-	xhr.open('GET', LOCATION_INTELLIGENCE_SERVER_URL + apiUrl);
-	if (responseType=='XML'){
-		xhr.setRequestHeader('Content-type', 'application/xml');
-		xhr.setRequestHeader('Accept', 'application/xml');
-	}
-	else if (responseType=='JSON'){
-		xhr.setRequestHeader('Authorization', 'Basic UkMydkxoSzdFOXpCN0pvbnQ5WEl0QVp4bUxiV2lHTTU6NXJqbXNGZ0ZZVDhheTM1TQ==')
-		xhr.setRequestHeader('Content-type', 'application/json');
-		xhr.setRequestHeader('Accept', 'application/json');
-	}
-	console.log(xhr);
-	xhr.send(null);
-	return true;	
-}*/
+ var xhr = new XMLHttpRequest();
+ var apiUrl = 'bylocation?latitude=' + latitude + '&longitude=' + longitude;
+ if (filter!= null && filter != ''){
+ apiUrl += '&filter=' + filter;
+ }
+
+ xhr.open('GET', LOCATION_INTELLIGENCE_SERVER_URL + apiUrl);
+ if (responseType=='XML'){
+ xhr.setRequestHeader('Content-type', 'application/xml');
+ xhr.setRequestHeader('Accept', 'application/xml');
+ }
+ else if (responseType=='JSON'){
+ xhr.setRequestHeader('Authorization', 'Basic UkMydkxoSzdFOXpCN0pvbnQ5WEl0QVp4bUxiV2lHTTU6NXJqbXNGZ0ZZVDhheTM1TQ==')
+ xhr.setRequestHeader('Content-type', 'application/json');
+ xhr.setRequestHeader('Accept', 'application/json');
+ }
+ console.log(xhr);
+ xhr.send(null);
+ return true;
+ }*/
