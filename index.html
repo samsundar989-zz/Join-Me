@@ -56,10 +56,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="#about">Location Search</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Create Profile</a>
+                    <a class="page-scroll" href="#services">Preferences</a>
                 </li>
 
             </ul>
@@ -110,40 +110,118 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                    <i class="fa fa-4x fa fa-venus-mars text-primary sr-icons"></i>
                     <h3>Gender</h3>
-                    <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                    <p class="text-muted">Are you a male or female?</p>
+                    <form action="gender-form.asp">
+                        <input type="checkbox" name="gender" value="Male"> Male<br>
+                        <input type="checkbox" name="gender" value="Female" checked> Female<br>   
+                    </form>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                    
+                    <i class="fa fa-4x fa-child text-primary sr-icons"></i>
                     <h3>Age</h3>
-                    <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                    <p class="text-muted">How old are you?</p>
+                    <form action="age-form.asp">
+                    <input type="number" name="age" min="7" max="100">
+                </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-thumbs-o-up  text-primary sr-icons"></i>
+                    <i class="fa fa-4x fa-thumbs-up text-primary sr-icons"></i>
+
+                    <h3>Ethnicity</h3>
+                    <p class="text-muted">How many ethnic backgrounds do you identify with?</p>
+                </div>
+                    <form action="ethnicity-form.asp">
+                        <input type="number" name="ethnic" min="1" max="3">
+                    </form>
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                    <h3>Marital Status</h3>
+                    <p class="text-muted">Are you married?</p>
+                    <form action="marital-form.asp">
+                        <input type="checkbox" name="marital" value="Yes"> Yes <br>
+                        <input type="checkbox" name="marital" value="No"> No <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-dollar text-primary sr-icons"></i>
+                    <h3>Income</h3>
+                    <p class="text-muted">How much do you make?</p>
+                    <form action="income-form.asp">
+                        <input type="number" name="income" min="0" max="200,000">
+                    </form> 
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-home text-primary sr-icons"></i>
+                    <h3>Household size</h3>
+                    <p class="text-muted">How many people are in your house?</p>
+                    <form action="household-form.asp">
+                        <input type="number" name="household" min="1" max="13">
+                    </form> 
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-automobile text-primary sr-icons"></i>
+                    <h3>Automobile</h3>
+                    <p class="text-muted">Do you have a car?</p>
+                    <form action="automobile-form.asp">
+                        <input type="checkbox" name="automobile" value="Yes"> Yes <br>
+                        <input type="checkbox" name="automobile" value="No"> No <br>
+                    </form>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                    <h3>Art</h3>
-                    <p class="text-muted">We update dependencies to keep things fresh.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                    <h3>Music</h3>
-                    <p class="text-muted">You have to make your websites with love these days!</p>
+                    <h3>Educational Attainment</h3>
+                    <p class="text-muted">Are you a college graduate?</p>
+                    <form action="college-form.asp">
+                        <input type="checkbox" name="college" value="Yes"> Yes <br>
+                        <input type="checkbox" name="college" value="No"> No <br>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <div style="text-align:center;margin-top=100px;">
+    <input type="button" value="Submit info" onClick="submitForms()" class="btn btn-primary btn-xl page-scroll" />
+</div>
 </section>
 
-<section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-
+<section id="poi-list">
+    <div class="container">
+        <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 text-center">
+            <ul id="final-list">
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+                <li class="poi_item"></li>
+            </ul>
+         </div>
         </div>
     </div>
 </section>

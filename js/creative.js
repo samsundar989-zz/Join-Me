@@ -62,3 +62,14 @@
     });
 
 })(jQuery); // End of use strict
+
+submitForms = function(){
+    document.forms["gender"].submit();
+    document.forms["age"].submit();
+    document.forms["ethnic"].submit();
+    document.forms["marital"].submit();
+    document.forms["income"].submit();
+    document.forms["household"].submit();
+    document.forms["automobile"].submit();
+    document.forms["college"].submit();
+}
