@@ -27,14 +27,7 @@ function GetLatandLong(latitude, longitude) {
 
 
 
-function showDiv() {
-	document.getElementbyId('final-list').style.display = "block";
-}
 
-function updateList() {
-	var item =document.getElementsByClassName("poi-item");
-	item.value = "New York";
-}
 
 
 

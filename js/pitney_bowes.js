@@ -26,7 +26,8 @@ function callGeoLifeByLocation(x, y, token) {
 function geoApisCallback(data) {
     if (data !== undefined) {
         $('#ResponseDiv').html(JSON.stringify(data));
-    }
+    }	
+
 }
 /**
  * Returns GeoLife Variables by location in XML or JSON formats
@@ -57,8 +58,17 @@ function geoApisCallback(data) {
  xhr.send(null);
  return true;
  }*/
- 
+$('#prefs').submit(function (e) {
+    e.preventDefault();
+});
+function showDiv() {
+	document.getElementById("final-list").style.display = "block";
+}
 
+function updateList() {
+	var item = document.getElementsByClassName("poi-item");
+	item.value = "New York";
+}
 function showList(){
     console.log("success");
 }
