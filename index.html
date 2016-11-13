@@ -92,6 +92,8 @@
         </div>
     </div>
 
+
+   
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <div id="map"></div>
 </section>
@@ -223,10 +225,15 @@
          </div>
         </div>
     </div>
+
+    <h1>GeoLife SDK Test Page</h1>
+        <button type="button" onclick="callGeoLifeByLocation();">GeoLife Demographics ByLocation</button>
+        <div class="response" id="ResponseDiv">See Response Here !</div>
 </section>
 
 <!-- jQuery -->
 <script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/LocationIntelligenceSDK-2.5.0-min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -240,10 +247,13 @@
 
 
 <script src="js/google_maps.js"></script>
+<script src="js/pitney_bowes.js"></script>
 <script src="js/creative.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARxiVAS0kJKVFIFhkQxXGkNEu3tDizaRI&libraries=places&callback=initMap"
         async defer></script>
+<!--<script src="http://api.tripadvisor.com/api/partner/2.0/map/42.33141,-71.099396?key=3762e2cd-0868-4cbe-b702-32d2dffcd449"></script>-->
+<script src = " https://api.pitneybowes.com/location-intelligence/geolife/v1/demographics/bylocation"></script>
 
 </body>
 
